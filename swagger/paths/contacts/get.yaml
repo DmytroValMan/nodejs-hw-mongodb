@@ -35,7 +35,6 @@ parameters:
     name: isFavourite
     schema:
       type: boolean
-      default: false
   - in: query
     name: type
     schema:
