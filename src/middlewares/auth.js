@@ -19,7 +19,7 @@ export const auth = async (req, res, next) => {
     throw createHttpError(401, 'Session token expired');
 
   const user = await User.findById(session.userId);
-  if (!user) throw createHttpError(401, 'User not found');
+  if (!user) throw createHttpError(404, 'User not found');
 
   req.user = user;
 

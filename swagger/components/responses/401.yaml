@@ -1,0 +1,36 @@
+description: Unauthorized error
+content:
+  application/json:
+    schema:
+      type: object
+      required:
+        - status
+        - message
+        - data
+      properties:
+        status:
+          type: integer
+          example: 401
+        message:
+          type: string
+          example: Token is expired or invalid.
+        data:
+          type: object
+          required:
+            - status
+            - message
+            - name
+            - expose
+          properties:
+            status:
+              type: integer
+              example: 401
+            message:
+              type: string
+              example: Token is expired or invalid.
+            name:
+              type: string
+              example: UnauthorizedError
+            expose:
+              type: boolean
+              example: true
